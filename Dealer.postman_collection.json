@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "2eb3728a-fe08-4820-b010-867c5c461b48",
+		"name": "Dealer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6ImFuZ2VsbGVnZXIifQ.eyJpc3MiOiIiLCJhdWQiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwianRpIjoiYW5nZWxsZWdlciIsImlhdCI6MTU0MzQyNzYzNywibmJmIjoxNTQzNDI3NjQ3LCJleHAiOjE1NDM1MTQwMzd9.MY8nEgeKVGZS4KDs2-3GkuYOAk61eEm4GbXQRuKUhIF8fnT1suA9XuvyWmzGk84tBBliqPTUOxIvtqO05I4O5A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "tokenId",
+						"value": "213213213213s1",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "root",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Dealer1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://172.21.0.8/login",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "root2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Hello",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://172.21.0.8/users",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://172.21.0.8/users/1",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IiJ9.eyJpc3MiOiIiLCJhdWQiOiJodHRwczpcL1wvcGhhbGNvbnBocC5jb20iLCJqdGkiOiIiLCJpYXQiOjE1NDMzMzA1NDMsIm5iZiI6MTU0MzMzMDU1MywiZXhwIjoxNTQzNDE2OTQzfQ.lYAtFeukjRw54J4weaNRQFrBP1ntTL5TpObksfLPkm-IvIf_uqRY-tyFzr8AwVdKM0EpgqYgq3-2r0WTiHM4dQ",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://172.21.0.8/users/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add News",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "News Lorem ipsum dolor sit amet",
+							"type": "text"
+						},
+						{
+							"key": "content\n",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://172.21.0.8/news/",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"news",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update News",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1MjQ4MjQsIm5iZiI6MTU0MzUyNDgzNCwiZXhwIjoxNTQzNjExMjI0fQ.3b8E60xvDIlLyUZxTqcnGuzikiGbEq8gOCS54gfk34Yk1ul5QKK2S48gYJTtV45K83_6Yhz3ASi1v9UjMBB47A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"id\": \"1\",\n\"title\": \"News Title\",\n\"content\": \"Loem ip sum masdi car not\"\n}"
+				},
+				"url": {
+					"raw": "http://172.21.0.8/news/112",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"news",
+						"112"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IiJ9.eyJpc3MiOiIiLCJhdWQiOiJodHRwczpcL1wvcGhhbGNvbnBocC5jb20iLCJqdGkiOiIiLCJpYXQiOjE1NDMzMzA1NDMsIm5iZiI6MTU0MzMzMDU1MywiZXhwIjoxNTQzNDE2OTQzfQ.lYAtFeukjRw54J4weaNRQFrBP1ntTL5TpObksfLPkm-IvIf_uqRY-tyFzr8AwVdKM0EpgqYgq3-2r0WTiHM4dQ",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://172.21.0.8/news?sort=title\n&page=1&limit=25&fields=id,title,content,user_id,created_date,updated_date,status",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"news"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "title\n"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "25"
+						},
+						{
+							"key": "fields",
+							"value": "id,title,content,user_id,created_date,updated_date,status"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get News By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IiJ9.eyJpc3MiOiIiLCJhdWQiOiJodHRwczpcL1wvcGhhbGNvbnBocC5jb20iLCJqdGkiOiIiLCJpYXQiOjE1NDMzMzA1NDMsIm5iZiI6MTU0MzMzMDU1MywiZXhwIjoxNTQzNDE2OTQzfQ.lYAtFeukjRw54J4weaNRQFrBP1ntTL5TpObksfLPkm-IvIf_uqRY-tyFzr8AwVdKM0EpgqYgq3-2r0WTiHM4dQ",
+						"disabled": true
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://172.21.0.8/news/1?",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"news",
+						"1"
+					],
+					"query": [
+						{
+							"key": "fields",
+							"value": "title",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete News",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IifQ.eyJpc3MiOiJodHRwOlwvXC9kZWFsZXJhcHBjZW50ZXIuY29tIiwiYXVkIjoiaHR0cDpcL1wvZGVhbGVyYXBwY2VudGVyLmNvbSIsImp0aSI6IjcxOWZlNWNmZGNjMTYxYzkxYWQ2M2IiLCJpYXQiOjE1NDM1ODYxNDAsIm5iZiI6MTU0MzU4NjE1MCwiZXhwIjoxNTQzNjcyNTQwfQ.cabBifOjN-OvHYcfyLhBb0c3Tl0MzYWzeMt-m4fRSt6GNrFaAvnzmv6z3hWE0ng0YMEXqSb9ka-9MCKdsUFF3A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+						"key": "Authorization",
+						"type": "text",
+						"value": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://172.21.0.8/news/4",
+					"protocol": "http",
+					"host": [
+						"172",
+						"21",
+						"0",
+						"8"
+					],
+					"path": [
+						"news",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
