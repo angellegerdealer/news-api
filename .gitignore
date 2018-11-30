@@ -1,0 +1,5 @@
+
+.env
+phinx.php
+tests/_output/
+vendor/
